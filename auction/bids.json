@@ -1,0 +1,17 @@
+{
+	"Bid1":
+	{
+		"Name": "Jane doe",
+		"Price": 100
+	},
+	"Bid2":
+	{
+		"Name": "John doe",
+		"Price": 120
+	},
+    "Bid3":
+	{
+		"Name": "Jane doe",
+		"Price": 130
+	}
+}

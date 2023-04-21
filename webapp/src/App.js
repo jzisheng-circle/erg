@@ -16,10 +16,6 @@ function App() {
   const [highBid, setHighBid] = useState([]);
   const [bids, setBids] = useState([]);
   const [name, setName] = useState("");
-  const [time, setTime] = useState(Date.now());
-
-
-  
 
 
   useEffect(() => {
@@ -70,6 +66,7 @@ function App() {
       .then(response => {
         if (name.length == 0) {
           throw("name cannot be empty")
+          alert("Name cannot be empty.");
         }
         console.log('success');
         

@@ -57,7 +57,7 @@ def insertBidDb(price, name):
         ref.push({'Name':name,'Price':price})
     else:
         raise Exception('Did not push bid')
-        
+    pass
 
 # setup()
 # getHighestBid()

@@ -64,6 +64,12 @@ function App() {
     var url = 'http://159.223.131.55:5000/bid';
     axios.post(url, data, config)
       .then(response => {
+        console.log(highBid.Name, name);
+        if (highBid.Name == name) {
+          
+          alert("You are already the highest bidder!");
+          throw("already highest bidder");
+        }
         if (name.length == 0) {
           alert("Name cannot be empty.");
           throw("name cannot be empty");
@@ -97,8 +103,8 @@ function App() {
   return (
     <div>
 
-    <div>
-      <table>
+    <div class="center2">
+      <table class = "center">
         <th>
 
         <form>
@@ -114,18 +120,20 @@ function App() {
         </th>
 
         <th>
-        <p>${highBid.Price+1}.00</p>
+        <p>Amount: ${highBid.Price+1}.00</p>
         </th>
 
 
         <th>
-        <button onClick={handleSubmit}>Bid</button>
+        
         </th>
       </table>
+      <table class = "center2"><button onClick={handleSubmit}>Bid!</button></table>
+      
     </div>
 
-    <div>
-    <table>
+    <div class="center2">
+    <table class="center">
       <tr>
         <th><h3>Bidder</h3></th> <th><h3>Price</h3></th>
       </tr>

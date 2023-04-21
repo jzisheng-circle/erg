@@ -1,3 +1,18 @@
+
+.center {
+  border: 1px solid;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+.center2 {
+  border: 0px solid;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
 .App {
   text-align: center;
 }

@@ -59,7 +59,7 @@ def insertBidDb(price, name):
         raise Exception('Did not push bid')
         
 
-setup()
+# setup()
 # getHighestBid()
 # bid(id_generator(), 133.1)
 

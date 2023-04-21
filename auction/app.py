@@ -53,7 +53,7 @@ def insertBidDb(price, name):
     ref = db.reference(DB_REF)
     highestBid = float(getHighestBid()['Price'])
     highestBidName = getHighestBid()['Name']
-    if price > 0 and price > highestBid and name != highestBidName:
+    if price > 0 and price > highestBid and len(name) > 0 and name != highestBidName:
         ref.push({'Name':name,'Price':price})
     else:
         raise Exception('Did not push bid')

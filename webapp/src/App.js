@@ -65,8 +65,8 @@ function App() {
     axios.post(url, data, config)
       .then(response => {
         if (name.length == 0) {
-          throw("name cannot be empty")
           alert("Name cannot be empty.");
+          throw("name cannot be empty");
         }
         console.log('success');
         

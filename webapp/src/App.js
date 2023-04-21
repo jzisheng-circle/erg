@@ -24,7 +24,7 @@ function App() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-        axios.get('http://127.0.0.1:5000/getHighestBid')
+        axios.get('http://159.223.131.55:5000/getHighestBid')
         .then(response => {
           setHighBid(response.data);
         })
@@ -32,7 +32,7 @@ function App() {
           console.error(error);
         });
 
-      axios.get('http://127.0.0.1:5000/getBids')
+      axios.get('http://159.223.131.55:5000/getBids')
         .then(response => {
           setBids(response.data);
         })
@@ -49,7 +49,7 @@ function App() {
     event.preventDefault();
 
     // get current high bid
-    axios.get('http://127.0.0.1:5000/getHighestBid')
+    axios.get('http://159.223.131.55:5000/getHighestBid')
     .then(response => {
       setHighBid(response.data);
     })
@@ -65,7 +65,7 @@ function App() {
         }
     }
     let data = {"bid": highBid.Price+1, "name": name};
-    var url = 'http://127.0.0.1:5000/bid';
+    var url = 'http://159.223.131.55:5000/bid';
     axios.post(url, data, config)
       .then(response => {
         if (name.length == 0) {
@@ -74,7 +74,7 @@ function App() {
         console.log('success');
         
         // refresh bids list
-        axios.get('http://127.0.0.1:5000/getBids')
+        axios.get('http://159.223.131.55:5000/getBids')
             .then(response => {
               setBids(response.data);
             })
@@ -83,7 +83,7 @@ function App() {
             });
         
         // refresh highest bid
-        axios.get('http://127.0.0.1:5000/getHighestBid')
+        axios.get('http://159.223.131.55:5000/getHighestBid')
           .then(response => {
             setHighBid(response.data);
           })
